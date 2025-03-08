@@ -1,0 +1,18 @@
+//*components
+@import "./_components/variables";
+@import "./_components/normalize";
+@import "./_components/breakpoints";
+@import "./_components/fonts";
+@import "./_components/mixins";
+@import "./_components/header";
+@import "./_components/footer";
+@import "./_components/cards";
+
+//*pages
+@import "./_pages/home";
+@import "./_pages/disciplines";
+@import "./_pages/contact";
+@import "./_pages/planning";
+@import "./_pages/tarifs";
+@import "./_pages/team";
+@import "./_pages/404";

@@ -1,0 +1,276 @@
+#index_body {
+  background-color: $background-black;
+  padding: 1rem 1rem;
+
+  #index_main {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px 30px;
+
+    .success{
+        @include success-style;
+    }
+
+    @include lato-regular;
+
+    #index_header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      span{
+        @include lato-bold;
+        font-size: 2rem;
+      }
+
+      button{
+        padding: 0.3rem 1rem;
+        background-color: $main-orange;
+        border-radius: 8px;
+        border-width: 1px;
+        transition: background-color 1s ease-in-out,
+        transform 1s ease-in-out;
+
+        &:hover{
+            filter: brightness(80%);
+        }
+
+        a{
+            @include lato-regular;
+            text-decoration: none;
+            color: $main-white;
+        }
+      }
+    }
+
+    ////////? SECTION BIENVENUE
+
+    .welcome_section {
+        line-height: 0.3rem;
+        @include border-parameters;
+
+        h1{
+            @include lato-bold;
+        }
+
+        h3{
+            padding-left: 0.8rem;
+            @include lato-light;
+        }
+    }
+
+    ////////? SECTION MESSAGE DEFILANTS
+    
+    .section_scrolling_messages {
+        @include border-parameters;
+        h1{
+            @include h1-parameters;
+        }
+
+        .message-container{
+            margin-bottom: 2rem;
+
+            .message-input {
+                background-color: $orange-background-element;
+                width: 50%;
+                margin-top: 2px;
+                @include rectangle-toggle-parameters;
+            }
+
+            .msg_submit_buttons{
+                @include rectangle-toggle-parameters;
+                @include padding-x(0.6rem);
+                background-color: $main-orange;
+                color: $main-white;
+            }
+            }
+        }
+
+        ////////? SECTION UPLOAD DE PLANNING
+        
+        .section_schedule_management{
+            @include border-parameters;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+                margin-bottom: 3rem;
+
+                .file-input {
+                    display: none; /* Cache l'input natif */
+                }
+
+                .file-button{ //TODO: Effet au survol du button
+                    background-color: $main-orange;
+                    padding: 0.5rem 1rem;
+                    border-radius: 8px;
+                    border-width: 1px;
+                    color: $main-white;
+                }
+                
+                .file-label {
+                    display: inline-block;
+                    background-color: $orange-background-element;
+                    color: $main-orange;
+                    padding: 4rem 5rem;
+                    border: dashed $main-orange 2px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    transition: background 0.3s ease;
+                }
+                
+                .file-label:hover {
+                    background-color: $main-orange;
+                    color: $main-white;
+                    border-color: $main-white;
+                }
+                
+                /* Affichage du nom du fichier */
+                .file-name {
+                    margin-left: 10px;
+                    font-size: 14px;
+                    color: #333;
+                }
+
+            }
+
+            h1{
+                @include h1-parameters;
+            }
+        }
+
+        .section_competitor_management {
+            @include border-parameters;
+
+            h1{
+                @include h1-parameters;
+            }
+
+            .add-competitor{
+                @include border-parameters;
+                
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 2rem;
+                    
+                    input{
+                        @include rectangle-toggle-parameters;
+                        background-color: $orange-background-element;
+                        margin-bottom: 0.8rem;
+                    }
+
+                    select{
+                        margin-bottom: 0.8rem;
+                    }
+
+                    .input-competitor-img{
+                        border: 1px solid black;
+                    }
+
+                    label{
+                        margin-bottom: 0.1rem;
+                    }
+
+                    button{ //TODO: ajouter un effet au survol du button
+                        background-color: $main-orange;
+                        color: $main-white;
+                        padding: 0.8rem;
+                        width: 15rem;
+                        border: 1px solid $background-black;
+                        border-radius: 8px;
+                        align-self: center;
+                    }
+                }
+            }
+
+            .list-competitor{
+             
+                table{
+                    border: 1px solid $border-gray;
+
+                    thead{
+                        background-color: $orange-background-element;
+                    }
+
+                    tbody{
+                        img{
+                            max-width: 160px;
+                            max-height: 120px;
+                            object-fit: cover;
+                        }
+
+                        td, th {
+                            padding: 1rem 1.5rem; /* Ajoute 10px en haut/bas et 20px à gauche/droite */
+                        }
+
+                        td{
+                            border-bottom: solid 1px black;
+                        }
+
+                        .interaction-table-button{
+                           button{
+                            background-color: $main-orange;
+                            color: $main-white;
+                            border-radius: 8px;
+                            border-width: 1px;
+                            padding: 0.5rem;
+                            margin-bottom: 0.5rem;
+
+                           }
+                        }
+                        
+                    }
+                }
+                }
+
+                .competitor-modify-management{
+                    @include border-parameters;
+                    margin-bottom: 2rem;
+                    form {
+                        display: flex;
+                        flex-direction: column;
+                        
+                        input {
+                            margin-bottom: 1.3rem;
+                            @include rectangle-toggle-parameters;
+                            background-color: $orange-background-element;
+                        }
+
+                        label {
+                            margin-bottom: 0.1rem;
+                        }
+
+                        select{
+                            margin-bottom: 1.5rem;
+                            background-color: $orange-background-element;
+                            @include rectangle-toggle-parameters;
+                        }
+
+                        img{
+                            max-width: 120px;
+                            max-height: 120px;
+                            object-fit: cover;
+                        }
+
+                        .new-photo{
+                            margin-bottom: 1rem;
+                        }
+
+                        button{
+                            width: 10rem;
+                            align-self: center;
+                            background-color: $main-orange;
+                            color: $main-white;
+                            @include rectangle-toggle-parameters;
+                            margin-bottom: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+  
+

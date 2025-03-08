@@ -1,0 +1,274 @@
+main{
+  max-width: 1280px;
+  margin: auto;
+}
+
+
+.index_header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .index_header_title_container {
+    text-align: center;
+    margin: 2rem 0;
+
+    h3,
+    h4 {
+      margin: 0;
+    }
+    h3 {
+      font-size: 1.5rem;
+      @include poppins-medium-italic;
+    }
+    h4 {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      text-transform: uppercase;
+      @include poppins-extralight-italic;
+    }
+  }
+}
+
+.index_team_description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  img {
+    max-width: 80%;
+
+    @media (max-width: $breakpoint){
+      max-width: 100%;
+    }
+  }
+  p {
+    text-align: center;
+  }
+}
+
+.index_discipline_info {
+  display: flex;
+  margin-bottom: 2rem;
+
+  @media (max-width: $breakpoint) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    @media (max-width: $breakpoint) {
+      margin-bottom: 2rem;
+    }
+
+    img {
+      max-width: 60%;
+    }
+
+    p {
+      text-align: center;
+
+      @media (max-width: $breakpoint) {
+        max-width: 90%;
+      }
+    }
+
+    button {
+      padding: 0.3rem 1.8rem;
+      background-color: $main-orange;
+      border-radius: 8px;
+      border-color: $background-black;
+      box-shadow: 0px 4px 3.5px 0.5px rgba(0, 0, 0, 0.24);
+
+      a {
+        text-decoration: none;
+        color: $main-white;
+      }
+
+      @media (max-width: $breakpoint) {
+        padding: 0.5rem 2.8rem;
+      }
+    }
+  }
+}
+
+.index_team_softskills {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  margin-top: 5rem;
+  margin-bottom: 5rem; //?Check si c'est propre en responsive
+
+  @media (max-width: $breakpoint) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: $breakpoint) {
+      margin-bottom: 3rem;
+    }
+
+    img {
+      width: 55%;
+    }
+
+    p {
+      font-size: medium;
+      @include poppins-regular;
+    }
+  }
+}
+
+.index_discover_us {
+  width: 90%;
+  margin: auto;
+
+  h3 {
+    @include poppins-semibold-italic;
+    text-decoration: underline;
+  }
+
+  div {
+    margin-bottom: 2rem;
+  }
+
+  .index_presentation {
+    display: flex;
+
+    @media (max-width: $breakpoint) {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+
+    img {
+      width: 35%;
+
+      @media (max-width: $breakpoint) {
+        width: 70%;
+      }
+    }
+    span {
+      margin-left: 3rem;
+
+      @media (max-width: $breakpoint) {
+        margin-left: 0;
+      }
+
+      h2 {
+        @include poppins-bold-italic;
+      }
+    }
+  }
+
+  .index_nos_installations {
+    display: flex;
+    flex-direction: column;
+
+    h2 { //TODO: Augmenter la taille de "Nos Installations"
+      align-self: center;
+      @include poppins-bold-italic;
+      margin-bottom: 4rem;
+      margin-top: 2rem;
+    }
+
+    div {
+      display: flex;
+      width: 100%;
+
+      @media (max-width: $breakpoint){
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+
+      img {
+        margin-left: auto;
+        width:  60%;
+
+        @media (max-width: $breakpoint){
+          width: 90%;
+          margin-left: 0;
+
+        }
+      }
+
+      span{
+        width: 30%;
+
+        @media (max-width: $breakpoint){
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .index_cross_training {
+    display: flex;
+    flex-direction: column;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+
+      @media (max-width: $breakpoint){
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5%;
+
+      }
+
+      img {
+        width: 27%;
+
+        @media(max-width: $breakpoint){
+          margin-bottom: 1rem;
+          width: 15rem;
+        }
+      }
+    }
+  }
+
+  .index_musculation {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width: $breakpoint){
+        flex-direction: column;
+        align-items: center;
+      }
+
+      img {
+        width: 48%;
+        @media (max-width: $breakpoint){
+          width: 80%;
+        }
+
+        &:first-child {
+          @media (max-width: $breakpoint){
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,208 @@
+$contact-responsive: 894px;
+
+.success-style{
+  @include success-style;
+}
+
+.error-style{
+  @include error-style;
+}
+
+.index_contact {
+  padding: 0 2rem;
+
+  h2{
+    @include poppins-medium-italic;
+  }
+
+  p, label{
+    @include poppins-regular;
+  }
+
+  
+
+  #logo_index_contact {
+    max-width: 50%;
+
+    @media (max-width: $contact-responsive){
+        max-width: 100%;
+    }
+  }
+
+  .contact_us{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+
+    @media (max-width: $contact-responsive){
+        flex-direction: column;
+       
+    }
+  }
+
+  .contact_infos {
+
+    @media (max-width: $contact-responsive){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2 {
+      text-decoration: underline;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      img {
+        width: 40px;
+        padding-right: 1rem;
+      }
+    }
+  }
+
+  .contact_form_container {
+    h2 {
+      text-decoration: underline;
+      margin-bottom: 2rem;
+    }
+    max-width: 48%;
+
+    @media (max-width: $contact-responsive){
+        margin-top: 2rem;
+        max-width: 100%;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      input,
+      textarea {
+        @include rectangle-toggle-parameters;
+        background-color: $orange-background-element;
+        margin-bottom: 1rem;
+        box-shadow: 3px 4px 5px -1px rgba(0, 0, 0, 0.397);
+      }
+
+      /* Customize the label (the container) */
+      .container {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* Hide the browser's default checkbox */
+      .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      /* Create a custom checkbox */
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        border-radius: 8px;
+        background-color: #eee;
+      }
+
+      /* On mouse-over, add a grey background color */
+      .container:hover input ~ .checkmark {
+        background-color: $orange-background-element;
+      }
+
+      /* When the checkbox is checked, add a blue background */
+      .container input:checked ~ .checkmark {
+        background-color: $main-orange;
+      }
+
+      /* Create the checkmark/indicator (hidden when not checked) */
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      /* Show the checkmark when checked */
+      .container input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      /* Style the checkmark/indicator */
+      .container .checkmark:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+      button {
+        background-color: $main-orange;
+        border: 1px solid $main-white;
+        border-radius: 8px;
+        img {
+          max-width: 40px;
+          padding: 0.3rem 0;
+        }
+      }
+
+      .line_form {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: $contact-responsive){
+            justify-content: unset;
+            flex-direction: column;
+        }
+       
+
+        div {
+          display: flex;
+          flex-direction: column;
+          
+          
+        }
+
+      }
+    }
+  }
+
+  .contact_find_us{
+    width: 50%;
+
+    @media (max-width: $contact-responsive){
+        margin-top: 3rem;
+        width: 100%;
+    }
+    h2{
+        text-decoration: underline;
+        text-transform: uppercase;
+    }
+
+    #map{
+        height: 500px;
+    }
+    
+  }
+}

@@ -1,0 +1,168 @@
+/*//TODO: Le deuxième message se déplace plus vite que les autres et leurs passe dessus
+* //TODO: Corriger le bug pour que les messages de suivent sans se superposer
+*
+* faire le footer
+*/
+
+.info-bar{
+    padding: 0.4rem 1rem;
+    display: flex;
+
+    span{
+        @include poppins-regular;
+    }
+
+    .social-media-icon-infobar{
+        margin-left: auto;
+        padding-top: 0.6rem;
+        display: flex;
+
+        .fill-gradient-instagram {
+            background-clip: text;
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            margin-right: 2rem;
+          }
+
+        .fa-facebook{
+            color: #397EE4;
+        }
+    }
+}
+
+@keyframes scrollMessage {
+    from {
+        transform: translateX(100%); /* Commencer l'animation hors de l'écran à droite */
+    }
+    to {
+        transform: translateX(-100%); /* Faire défiler à gauche */
+    }
+}
+
+.scrolling-messages {
+    width: 100%;
+    background-color: $main-orange;
+    color: $main-white;
+    padding: 5px 0;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    @include poppins-regular-italic;
+
+    white-space: nowrap; /* Eviter le retour à la ligne dans le conteneur */
+
+    .messages-container {
+        display: flex;
+        /* Animation immédiate */
+        animation: scrollMessage 40s linear infinite; 
+        animation-delay: -6s; /* Assurer qu'il n'y a pas de délai */
+        animation-timing-function: linear; /* Animation fluide */
+
+        transform: translateX(100%); /* Le conteneur commence à droite */
+    }
+
+    .message-line {  /* Changer le nom de la classe pour 'message-line' */
+        white-space: nowrap; /* Chaque message reste sur une seule ligne */
+        margin-right: 60px; /* Espacement entre les messages */
+    }
+}
+
+
+
+.navbar {
+    @include flex-center;
+    justify-content: space-between;
+    background: $background-black;
+    padding: 10px 20px;
+
+    .logo {
+        background-color: $main-white;
+        border-radius: 50%;
+        height: 4rem;
+        padding: 0;
+        margin: 0;
+        img{
+            width: 4rem;
+            height: 4rem;
+            object-fit: cover;
+        }
+    }
+}
+
+
+.nav-links {
+    list-style: none;
+    @include flex-center;
+    gap: 40px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    li {
+        display: inline;
+        position: relative;
+    }
+
+    a {
+        text-decoration: none;
+        color: $main-white;
+        font-size: 18px;
+        transition: color 0.3s;
+        @include hover-underline;
+        @include poppins-regular;
+
+        &:hover {
+            color: $main-orange;
+        }
+    }
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background: $main-white;
+        margin: 5px 0;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+@media (max-width: $breakpoint) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: $background-black;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-toggle.toggle {
+        .bar:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .bar:nth-child(2) {
+            opacity: 0;
+        }
+        .bar:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+    }
+}

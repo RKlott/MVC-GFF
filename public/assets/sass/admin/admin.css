@@ -1,0 +1,650 @@
+@charset "UTF-8";
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  appearance: button;
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  appearance: textfield;
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+.login_body {
+  background-color: black;
+  padding: 1rem 1.8rem;
+}
+
+.login_main {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+}
+.login_main .login_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login_main .login_section .login_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2%;
+}
+.login_main .login_section .login_header h1 {
+  text-align: center;
+  font-family: "Lato", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.login_main .login_section .login_header img {
+  width: 14rem;
+  height: 14rem;
+}
+.login_main .login_section .login_form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.login_main .login_section .login_form .login_label {
+  margin-bottom: 0.2%;
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.login_main .login_section .login_form .login_input {
+  margin-bottom: 3.5%;
+  background-color: #fecfc2;
+  border-radius: 8px;
+  height: 2.5rem;
+  border-width: 1px;
+  padding-left: 10px;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.login_main .login_section .login_form .login_input:hover {
+  background-color: #ffc0ae;
+}
+.login_main .login_section .login_form .login_submit_button {
+  background-color: #f76c45;
+  color: white;
+  font-weight: 900;
+  font-size: 22px;
+  padding: 0.5rem 0;
+  border-width: 1px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  font-family: "Lato", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.login_main .login_section .login_form .login_submit_button:hover {
+  background-color: #ff592b;
+  transform: scale(1.01);
+}
+
+#index_body {
+  background-color: #110B0A;
+  padding: 1rem 1rem;
+}
+#index_body #index_main {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px 30px;
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+#index_body #index_main .success {
+  background-color: rgb(134, 238, 134);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border-width: 1px;
+}
+#index_body #index_main #index_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#index_body #index_main #index_header span {
+  font-family: "Lato", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2rem;
+}
+#index_body #index_main #index_header button {
+  padding: 0.3rem 1rem;
+  background-color: #ff3700;
+  border-radius: 8px;
+  border-width: 1px;
+  transition: background-color 1s ease-in-out, transform 1s ease-in-out;
+}
+#index_body #index_main #index_header button:hover {
+  filter: brightness(80%);
+}
+#index_body #index_main #index_header button a {
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  color: #FCFCFC;
+}
+#index_body #index_main .welcome_section {
+  line-height: 0.3rem;
+  border: 1px rgb(206, 206, 206) solid;
+  border-radius: 8px;
+  margin-top: 2rem;
+  padding: 0 1.4rem;
+}
+#index_body #index_main .welcome_section h1 {
+  font-family: "Lato", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+#index_body #index_main .welcome_section h3 {
+  padding-left: 0.8rem;
+  font-family: "Lato", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+#index_body #index_main .section_scrolling_messages {
+  border: 1px rgb(206, 206, 206) solid;
+  border-radius: 8px;
+  margin-top: 2rem;
+  padding: 0 1.4rem;
+}
+#index_body #index_main .section_scrolling_messages h1 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+#index_body #index_main .section_scrolling_messages .message-container {
+  margin-bottom: 2rem;
+}
+#index_body #index_main .section_scrolling_messages .message-container .message-input {
+  background-color: #ffd2ad;
+  width: 50%;
+  margin-top: 2px;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  border-width: 1px;
+}
+#index_body #index_main .section_scrolling_messages .message-container .msg_submit_buttons {
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  border-width: 1px;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  background-color: #ff3700;
+  color: #FCFCFC;
+}
+#index_body #index_main .section_schedule_management {
+  border: 1px rgb(206, 206, 206) solid;
+  border-radius: 8px;
+  margin-top: 2rem;
+  padding: 0 1.4rem;
+}
+#index_body #index_main .section_schedule_management form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+  /* Affichage du nom du fichier */
+}
+#index_body #index_main .section_schedule_management form .file-input {
+  display: none; /* Cache l'input natif */
+}
+#index_body #index_main .section_schedule_management form .file-button {
+  background-color: #ff3700;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border-width: 1px;
+  color: #FCFCFC;
+}
+#index_body #index_main .section_schedule_management form .file-label {
+  display: inline-block;
+  background-color: #ffd2ad;
+  color: #ff3700;
+  padding: 4rem 5rem;
+  border: dashed #ff3700 2px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+#index_body #index_main .section_schedule_management form .file-label:hover {
+  background-color: #ff3700;
+  color: #FCFCFC;
+  border-color: #FCFCFC;
+}
+#index_body #index_main .section_schedule_management form .file-name {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #333;
+}
+#index_body #index_main .section_schedule_management h1 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+#index_body #index_main .section_competitor_management {
+  border: 1px rgb(206, 206, 206) solid;
+  border-radius: 8px;
+  margin-top: 2rem;
+  padding: 0 1.4rem;
+}
+#index_body #index_main .section_competitor_management h1 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+#index_body #index_main .section_competitor_management .add-competitor {
+  border: 1px rgb(206, 206, 206) solid;
+  border-radius: 8px;
+  margin-top: 2rem;
+  padding: 0 1.4rem;
+}
+#index_body #index_main .section_competitor_management .add-competitor form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+#index_body #index_main .section_competitor_management .add-competitor form input {
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  border-width: 1px;
+  background-color: #ffd2ad;
+  margin-bottom: 0.8rem;
+}
+#index_body #index_main .section_competitor_management .add-competitor form select {
+  margin-bottom: 0.8rem;
+}
+#index_body #index_main .section_competitor_management .add-competitor form .input-competitor-img {
+  border: 1px solid black;
+}
+#index_body #index_main .section_competitor_management .add-competitor form label {
+  margin-bottom: 0.1rem;
+}
+#index_body #index_main .section_competitor_management .add-competitor form button {
+  background-color: #ff3700;
+  color: #FCFCFC;
+  padding: 0.8rem;
+  width: 15rem;
+  border: 1px solid #110B0A;
+  border-radius: 8px;
+  align-self: center;
+}
+#index_body #index_main .section_competitor_management .list-competitor table {
+  border: 1px solid rgb(206, 206, 206);
+}
+#index_body #index_main .section_competitor_management .list-competitor table thead {
+  background-color: #ffd2ad;
+}
+#index_body #index_main .section_competitor_management .list-competitor table tbody img {
+  max-width: 160px;
+  max-height: 120px;
+  object-fit: cover;
+}
+#index_body #index_main .section_competitor_management .list-competitor table tbody td, #index_body #index_main .section_competitor_management .list-competitor table tbody th {
+  padding: 1rem 1.5rem; /* Ajoute 10px en haut/bas et 20px à gauche/droite */
+}
+#index_body #index_main .section_competitor_management .list-competitor table tbody td {
+  border-bottom: solid 1px black;
+}
+#index_body #index_main .section_competitor_management .list-competitor table tbody .interaction-table-button button {
+  background-color: #ff3700;
+  color: #FCFCFC;
+  border-radius: 8px;
+  border-width: 1px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+#index_body #index_main .section_competitor_management .competitor-modify-management {
+  border: 1px rgb(206, 206, 206) solid;
+  border-radius: 8px;
+  margin-top: 2rem;
+  padding: 0 1.4rem;
+  margin-bottom: 2rem;
+}
+#index_body #index_main .section_competitor_management .competitor-modify-management form {
+  display: flex;
+  flex-direction: column;
+}
+#index_body #index_main .section_competitor_management .competitor-modify-management form input {
+  margin-bottom: 1.3rem;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  border-width: 1px;
+  background-color: #ffd2ad;
+}
+#index_body #index_main .section_competitor_management .competitor-modify-management form label {
+  margin-bottom: 0.1rem;
+}
+#index_body #index_main .section_competitor_management .competitor-modify-management form select {
+  margin-bottom: 1.5rem;
+  background-color: #ffd2ad;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  border-width: 1px;
+}
+#index_body #index_main .section_competitor_management .competitor-modify-management form img {
+  max-width: 120px;
+  max-height: 120px;
+  object-fit: cover;
+}
+#index_body #index_main .section_competitor_management .competitor-modify-management form .new-photo {
+  margin-bottom: 1rem;
+}
+#index_body #index_main .section_competitor_management .competitor-modify-management form button {
+  width: 10rem;
+  align-self: center;
+  background-color: #ff3700;
+  color: #FCFCFC;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  border-width: 1px;
+  margin-bottom: 1.5rem;
+}
+
+/*# sourceMappingURL=admin.css.map */

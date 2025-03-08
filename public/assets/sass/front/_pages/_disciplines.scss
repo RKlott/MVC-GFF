@@ -1,0 +1,127 @@
+.discip_section {
+  .discip_container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+
+    h2{
+        padding-left: 1%;
+        text-decoration: underline;
+        @media (max-width: $breakpoint){
+            padding: 0;
+            
+        }
+    }
+
+    .discip_mma {
+        width: 100%;
+        background-color: #060606;
+        color: $main-white;
+
+        @media (max-width: $breakpoint){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .discip-txt-box{
+            padding-left: 1rem;
+            padding-top: 1rem;
+        }
+    }
+
+    .discip_kick {
+
+        @media (max-width: $breakpoint){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .discip-txt-box{
+            padding-right: 1rem;
+            padding-top: 1rem;
+        }
+
+        .discip-group{
+            @media (max-width: $breakpoint){
+                flex-direction: column-reverse;
+            }
+        }
+       
+    }
+       
+      .discip-group {
+        display: flex;
+        gap: 2rem;
+
+        @media (max-width: $breakpoint){
+            flex-direction: column;
+        }
+        
+        
+
+        .discip-txt-box {
+            
+
+            @media (max-width: $breakpoint){
+                padding: 1rem;
+            }
+           
+          .info-div {
+           
+            background-color: #150505;
+            color: $main-white;
+            border: 5px solid $main-orange;
+            display: flex;
+            gap: 2%;
+            padding: 0.5rem;
+            text-align: center;
+            
+
+            @media (max-width: $breakpoint){
+                font-size: 0.8rem;
+                align-items: center;
+                justify-content: center;
+            }
+
+            span{
+                @media (max-width: $breakpoint){
+                    font-size: 1rem;
+                }
+            }
+
+            img {
+              width: 2.2rem;
+              height: 2.2rem;
+            }
+          }
+
+          .discip_mma_txt {
+            
+            padding-top: 1rem;
+          }
+        }
+
+        .discip_img_container {
+          display: flex;
+          justify-content: center;
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          img {
+          width: 80%;
+
+          @media (max-width: $breakpoint){
+            width: 50%;
+        }
+
+        @media (max-width: 440px){
+            width: 70%;
+        }
+          }
+        }
+      }
+    }
+  }
+

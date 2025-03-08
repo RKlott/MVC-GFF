@@ -1,0 +1,45 @@
+$background-black: #110B0A;
+$main-white: #FCFCFC;
+$main-orange: #E1592C;
+$sub-orange: #f4a261;
+$orange-background-element: #ffd2ad;
+
+$footer-background-black: #282828;
+
+
+//? Effet sous-ligné centré pour les titres
+.underline-effect {
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+}
+
+
+
+.underline-effect::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Distance par rapport au texte */
+    width: 50%; /* Taille de la barre */
+    height: 1px; /* Épaisseur */
+    background-color: black;
+    transform: translateX(-50%);
+}
+
+.white-underline-effect {
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+}
+
+.white-underline-effect::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Distance par rapport au texte */
+    width: 50%; /* Taille de la barre */
+    height: 1px; /* Épaisseur */
+    background-color: $main-white;
+    transform: translateX(-50%);
+}

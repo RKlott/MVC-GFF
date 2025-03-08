@@ -1,0 +1,165 @@
+
+
+.team_coach{
+    display: flex;
+    flex-direction: column;
+    h2{
+        text-decoration: underline;
+       padding-left: 2rem;
+
+        @media (max-width: $breakpoint){
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+    }
+
+    span{
+        @media (max-width: $breakpoint){
+            padding-bottom: 1.5rem;
+        }
+    }
+
+    div{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+
+        @media (max-width: $breakpoint){
+            flex-direction: column-reverse;
+            align-items: center;
+            text-align: center;
+        }
+
+        img{
+            max-width: 50%;
+
+            @media (max-width: $breakpoint){
+                max-width: 80%;
+            }
+        }
+    }
+
+    .mma_coach{
+        span{
+            width: 100%;
+            margin-left: 5%;
+
+
+            h3{
+                font-size: 3rem;
+                padding: 5% 0 0 5%;
+                margin: 0;
+
+                @media (max-width: $breakpoint){
+                    padding: 0;
+                }
+
+                @media (max-width: 988px){
+                    font-size: 2.3rem;
+                }
+            }
+
+            h4{
+                font-size: 1.5rem;
+                margin: 0;
+            }
+        }
+    }
+
+    .kickboxing_coach{
+        flex-direction: row-reverse;
+
+        @media (max-width: $breakpoint){
+            flex-direction: column-reverse;
+            align-items: center;
+            text-align: center;
+        }
+
+        span{
+            width: 100%;
+            margin-right: 5%;
+        
+
+            h3{
+                font-size: 3rem;
+                padding: 5% 0 0 2%;
+                margin: 0;
+
+                @media (max-width: $breakpoint){
+                    padding: 0;
+                    padding-top: 1.5rem;
+                }
+
+                @media (max-width: 988px){
+                    font-size: 2.5rem;
+                }
+            }
+
+            h4{
+                font-size: 1.5rem;
+                padding: 0 0 0 25%;
+                margin: 0;
+                @media (max-width: $breakpoint){
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    .team_coach_story{
+        width: 80%;
+        margin: auto;
+        margin-top: 2rem;
+    }
+}
+
+.team_competitor {
+    text-align: center;
+    padding: 40px 20px;
+    
+    .competitor-section {
+        text-align: center;
+        padding: 40px 20px;
+    }
+    
+    .competitor-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .competitor-card {
+        background: #f4f4f4;
+        padding: 8px;
+        border-radius: 8px;
+        box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+    
+        &:hover {
+            transform: scale(1.05);
+        }
+    
+        img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+    
+        h3 {
+            margin: 10px 0;
+            font-size: 20px;
+            color: #333;
+        }
+    
+        p {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #666;
+        }
+    }
+    
+}

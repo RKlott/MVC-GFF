@@ -1,0 +1,78 @@
+@media (max-width: $breakpoint) {
+
+    footer{
+        display: flex;
+        flex-direction: column;
+
+        .footer_socialmedia{ //TODO: faire en sorte que les icones s'affichent bien à l'horizontal en format tablette et moins
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+}
+
+footer {
+  width: 100%;
+  color: $sub-orange;
+  background-color: $background-black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  
+
+
+  .footer_logo {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+
+
+      img {
+        width: 14rem;
+        object-fit: cover;
+        background-color: white;
+        border-radius: 50%;
+      }
+    
+  }
+
+  .footer_link{
+    display: flex;
+    align-items: center;
+    padding: 0 4%;
+    .footer_address{
+        margin-right: 20%;
+    }
+  }
+
+  .footer_socialmedia{
+    margin-right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+    @media (max-width: $breakpoint){
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      flex-direction: row;
+    }
+
+    .fill-gradient-instagram {
+        background-clip: text;
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+        margin-right: 2rem;
+      }
+
+    .fa-facebook{
+        color: #397EE4;
+        background-color: $main-white;
+        width: fit-content;
+        height: fit-content;
+        border-radius: 50%;
+    }
+  }
+}

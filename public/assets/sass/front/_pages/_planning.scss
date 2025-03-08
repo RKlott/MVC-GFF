@@ -1,0 +1,27 @@
+.planning-container {
+    text-align: center;
+    padding: 10px;
+
+    @media (max-width: $breakpoint) {
+        padding: 5px;
+    }
+
+    .planning-image {
+        width: 100%;
+        height: auto;
+
+        @media (min-width: $breakpoint) { // Pour les écrans d'ordinateur portable et plus grands
+            width: 80%;
+            margin: 0 auto; // Centre l'image si nécessaire
+            display: block;  // Pour éviter tout problème d'alignement
+        }
+
+       
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: gray;
+        @include poppins-regular-italic;
+    }
+}

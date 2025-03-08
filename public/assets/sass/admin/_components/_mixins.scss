@@ -1,0 +1,30 @@
+@mixin border-parameters{
+    border: 1px $border-gray solid;
+    border-radius: 8px;
+    margin-top: 2rem;
+    padding: 0 1.4rem;
+}
+
+@mixin rectangle-toggle-parameters {
+    padding: 0.5rem 0.5rem;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+@mixin padding-x($size) {
+    padding-left: $size;
+    padding-right: $size;
+}
+
+@mixin h1-parameters {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+@mixin success-style {
+    background-color: rgb(134, 238, 134);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border-width: 1px;
+}

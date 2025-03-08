@@ -1,0 +1,47 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin rectangle-toggle-parameters {
+    padding: 0.5rem 0.5rem;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+@mixin success-style {
+    background-color: rgb(134, 238, 134);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border-width: 1px;
+}
+
+@mixin error-style {
+    background-color: rgb(238, 134, 134);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border-width: 1px;
+}
+
+@mixin hover-underline {
+    position: relative;
+    padding-bottom: 5px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 3px;
+        background-color: $sub-orange;
+        transition: width 0.3s ease-in-out;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}
