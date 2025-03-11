@@ -1,16 +1,16 @@
 <?php
 
+require_once __DIR__ . '/../vendor/autoload.php';
+
 use Core\Router;
 
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
-// Création du routeur
 $router = new Router();
 
-// Définition des routes
-$router->add('', 'HomeController', 'index');
-$router->add('admin', 'AdminController', 'index');
-$router->add('admin/login', 'AdminController', 'login');
+$router->get('admin/login', 'AuthController@login'); // Afficher formulaire
+$router->post('admin/login', 'AuthController@login'); // Traiter connexion
 
-// Dispatcher l'URL
+$router->get('admin/logout', 'AuthController@logout');
+$router->get('admin/messages', 'MessagesController@index');
+$router->post('admin/messages/update', 'MessagesController@update');
+
 $router->dispatch($_SERVER['REQUEST_URI']);

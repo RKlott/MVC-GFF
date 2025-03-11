@@ -1,15 +1,8 @@
 {
-    "name": "lenovo/mvc-gff",
     "autoload": {
         "psr-4": {
-            "Lenovo\\MvcGff\\": "src/"
+            "App\\": "App/",
+            "Core\\": "Core/"
         }
-    },
-    "authors": [
-        {
-            "name": "William",
-            "email": "proklott@gmail.com"
-        }
-    ],
-    "require": {}
+    }
 }

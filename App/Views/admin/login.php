@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/assets/sass/admin/admin.css"> <!--//TODO: Mettre ça dans un sous dossier "admin"-->
+    <link rel="stylesheet" href="./public/assets/sass/admin/admin.css"> <!--//TODO: Mettre ça dans un sous dossier "admin"-->
     <meta charset="UTF-8">
     <title>Connexion Admin</title>
 </head>
@@ -16,9 +16,6 @@
                 <img src="/public/assets/img/GFF_high_quality_transparent.png" alt="logo_team">
             </div>
 
-            <?php if (!empty($error)) : ?>
-                <p style="color: red;"><?= htmlspecialchars($error) ?></p>
-            <?php endif; ?>
 
             <form method="post" action="/admin/login" class="login_form">
                 <label class="login_label">Nom d'utilisateur</label>
@@ -26,6 +23,10 @@
 
                 <label class="login_label">Mot de passe</label>
                 <input type="password" name="password" class="login_input" required>
+
+                <?php if (isset($_GET['error'])): ?>
+                    <p class="error-message">Identifiants incorrects, veuillez réessayer.</p>
+                <?php endif; ?>
 
                 <button class="login_submit_button" type="submit">CONNEXION</button>
             </form>
